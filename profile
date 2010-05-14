@@ -1,8 +1,9 @@
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/web/tools/bin:$PATH
+export PATH=/usr/local/bin:/web/tools/bin:$PATH
 export MANPATH=/opt/local/man:$MANPATH
 
 export DEV_SOCKET="/opt/local/var/run/mysql5/mysqld.sock"
 export TEST_SOCKET="/opt/local/var/run/mysql5/mysqld.sock"
+export RAILS_ENV=development
 
 alias e="emacsclient -n"
 alias di="svn di -x -w"
@@ -31,7 +32,7 @@ alias gd='git diff'
 
 alias ci='git commit'
 
-source /opt/local/share/doc/git-core/contrib/completion/git-completion.bash
+source /usr/local/etc/bash_completion.d/git-completion.bash
 complete -o default -o nospace -F _git_checkout gco
 
 export PS1="\[\033[38m\]\u:\[\033[01;36m\]\w \[\033[35m\]\`ruby -e \"print (%x{git branch 2> /dev/null}.grep(/^\*/).first || '').gsub(/^\* (.+)$/, '(\1) ')\"\`\[\033[37m\]$\[\033[00m\] "
