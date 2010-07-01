@@ -20,6 +20,6 @@ Wirble.colorize
 
 if ENV.include?('RAILS_ENV')
   def me
-    User.find_by_email_address(Subsite.default, "mnutt@gilt.com")
+    User.find_by_email("michael@market.io")
   end
 end
