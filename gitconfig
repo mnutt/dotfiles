@@ -10,6 +10,7 @@
   branch = auto
 [branch]
   autosetupmerge = true
+  autosetuprebase = always
 [github]
   user = mnutt
 [push]
