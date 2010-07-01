@@ -1,13 +1,11 @@
-export PATH=/usr/local/bin:/web/tools/bin:$PATH
-export MANPATH=/opt/local/man:$MANPATH
+export PATH=/usr/local/bin:/usr/local/sbin/bin:$PATH
 
-export DEV_SOCKET="/opt/local/var/run/mysql5/mysqld.sock"
-export TEST_SOCKET="/opt/local/var/run/mysql5/mysqld.sock"
+# Colorize the Terminal
+export CLICOLOR=1;
+
 export RAILS_ENV=development
 
 alias e="emacsclient -n"
-alias di="svn di -x -w"
-export SVN_EDITOR="emacsclient"
 
 alias ls='ls -G'
 
@@ -15,8 +13,6 @@ export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
 
 bind "set completion-ignore-case on"
-
-source ~/.gilt_profile
 
 alias pull='git pull'
 alias gpl='git pull'
