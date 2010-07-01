@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:/usr/local/sbin/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Colorize the Terminal
 export CLICOLOR=1;
