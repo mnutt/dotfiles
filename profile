@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7/bin:$PATH
 
 # Colorize the Terminal
 export CLICOLOR=1;
@@ -40,4 +40,4 @@ function bgrep {
   grep -Ri $1 $BGREP_GEM_PATH | sed "s|$BGREP_GEM_PATH|\`bundle show $2\`|g" | grep $1
 }
 
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvmexport PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/Cellar/python/2.7/bin/:/usr/local/Cellar/python/2.7/bin/
