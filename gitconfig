@@ -15,3 +15,5 @@
   user = mnutt
 [push]
   default = current
+[rerere]
+	enabled = 1
