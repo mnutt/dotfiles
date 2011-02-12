@@ -1,7 +1,9 @@
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/Cellar/python/2.7/bin:$PATH
 
 # Colorize the Terminal
 export CLICOLOR=1;
+
+export NODE_PATH=/usr/local/lib/node
 
 alias e="emacsclient -n"
 
