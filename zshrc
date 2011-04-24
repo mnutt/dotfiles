@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/Cellar/python/2.7/bin:$PATH
+
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="pengwynn"
@@ -21,3 +23,4 @@ plugins=(rails git ruby brew osx gem ssh-agent cap)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+if [[ -s /Users/michael/.rvm/scripts/rvm ]] ; then source /Users/michael/.rvm/scripts/rvm ; fi
