@@ -7,5 +7,3 @@ gem: --no-ri --no-rdoc
 :bulk_threshold: 1000
 :sources: 
 - http://gems.rubyforge.org/
-- http://gems.github.com
-gem: -n/usr/local/bin
