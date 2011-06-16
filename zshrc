@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/Cellar/python/2.7/bin:$PATH
-
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="pengwynn"
+
+export NODE_PATH=/usr/local/lib/node
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
@@ -22,5 +22,11 @@ plugins=(rails git ruby brew osx gem ssh-agent cap)
 
 source $ZSH/oh-my-zsh.sh
 
+alias z="cd code/$1"
+
 # Customize to your needs...
-if [[ -s /Users/michael/.rvm/scripts/rvm ]] ; then source /Users/michael/.rvm/scripts/rvm ; fi
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7/bin:$PATH
+
+# [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvmexport PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/Cellar/python/2.7/bin/:/usr/local/Cellar/python/2.7/bin/
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
