@@ -17,3 +17,5 @@
   default = current
 [rerere]
 	enabled = 1
+[heroku]
+	account = personal
