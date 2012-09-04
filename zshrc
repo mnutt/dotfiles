@@ -23,6 +23,8 @@ plugins=(rails git ruby brew osx gem ssh-agent cap)
 source $ZSH/oh-my-zsh.sh
 
 alias z="cd code/$1"
+alias mi="cd ~/p/movableink/movableink"
+alias oj="cd ~/p/movableink/ojos"
 
 export EDITOR=emacsclient
 
