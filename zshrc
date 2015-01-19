@@ -6,6 +6,9 @@ export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="pengwynn"
 
 export NODE_PATH=/usr/local/lib/node
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
