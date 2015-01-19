@@ -4,18 +4,35 @@
 [merge]
   summary = false
 [color]
-  diff = auto
-  status = auto
-  interactive = auto
-  branch = auto
+	diff = auto
+	status = auto
+	interactive = auto
+	branch = auto
+	ui = auto
 [branch]
-  autosetupmerge = true
+	autosetupmerge = true
   autosetuprebase = always
 [github]
   user = mnutt
 [push]
   default = current
+[apply]
+	whitespace = nowarn
 [rerere]
-	enabled = 1
+  enabled = 1
 [heroku]
-	account = personal
+  account = personal
+[alias]
+	st = status
+	di = diff
+	co = checkout
+	ci = commit
+	br = branch
+	sta = stash
+	llog = log --date=local
+
+[core]
+	excludesfile = /Users/michael/.gitignore_global
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
