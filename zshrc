@@ -28,6 +28,9 @@ source $ZSH/oh-my-zsh.sh
 alias z="cd code/$1"
 alias mi="cd ~/p/movableink/movableink"
 alias oj="cd ~/p/movableink/ojos"
+alias gb="git for-each-ref --format='%(refname:short)' --sort=-committerdate refs/heads/ |head -20"
+
+e () { emacsclient $* &> /dev/null & }
 
 export EDITOR=emacsclient
 

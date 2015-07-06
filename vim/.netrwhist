@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/michael/.config/consular'
-let g:netrw_dirhist_2='/Users/michael/p/personal/hummingbird/public/foo'
-let g:netrw_dirhist_3='/Users/michael/workspace/movableink_setup/cookbooks/pivotal_workstation/.git'
-let g:netrw_dirhist_4='/Users/michael/p/movableink/movableink/public'
-let g:netrw_dirhist_5='/Users/michael/p/movableink/movableink/app/views/public/home/index'
-let g:netrw_dirhist_6='/Users/michael/p/movableink/movableink'
-let g:netrw_dirhist_7='/Users/michael/p/src/buzzer2/views'
-let g:netrw_dirhist_8='/Users/michael/p/movableink/movableink/vendor/assets/javascripts/hummingbird'
-let g:netrw_dirhist_9='/Users/michael/.rvm/gems/ruby-1.9.3-p448/gems/chef-10.22.0/lib/chef'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/michael/workspace/dotfiles/oh-my-zsh/plugins/ssh-agent'
