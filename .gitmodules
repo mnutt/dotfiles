@@ -3,4 +3,4 @@
 	url = git@github.com:mnutt/emacs-starter-kit.git
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
-	url = git://github.com/pengwynn/oh-my-zsh.git
+	url = git://github.com/robbyrussell/oh-my-zsh.git
