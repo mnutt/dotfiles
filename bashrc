@@ -1,6 +1,17 @@
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-# ADDED BY npm FOR NVM
-. ~/.npm/nvm/0.0.6/package/nvm.sh
-# END ADDED BY npm FOR NVM
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+alias z="cd code/$1"
+alias mi="cd ~/p/movableink/movableink"
+alias oj="cd ~/p/movableink/ojos"
+alias gb="git for-each-ref --format='%(refname:short)' --sort=-committerdate refs/heads/ |head -20"
+
+export EDITOR=emacsclient
+
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7/bin:$PATH
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+. ~/.nvm/nvm.sh
