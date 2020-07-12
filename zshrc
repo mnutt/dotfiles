@@ -15,8 +15,11 @@ export PATH=$PATH:$GOBIN
 
 export PATH=$PATH:$HOME/.cargo/bin
 
-export JAVA_HOME='/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home'
+# export JAVA_HOME='/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home'
+export JAVA_HOME=`/usr/libexec/java_home`
 export PATH=$JAVA_HOME:$PATH
+
+export PATH="/usr/local/opt/qt/bin:$PATH"
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
@@ -37,13 +40,18 @@ alias z="cd code/$1"
 alias mi="cd ~/p/movableink/movableink"
 alias oj="cd ~/p/movableink/ojos"
 alias ca="cd ~/p/movableink/canvas"
-alias gb="git for-each-ref --format='%(refname:short)' --sort=-committerdate refs/heads/ |head -20"
+alias gb="git for-each-ref --format='%(align:15,left)%(committerdate:relative)%(end) %(color:bold white)%(refname:short)' --color=always --sort=-committerdate refs/heads/ |head -40"
+alias gpr="git pull --rebase"
 alias ember="nocorrect ember"
 alias npm="nocorrect npm"
 alias f="fly -t main"
 alias k="kubectl"
 alias dc="docker-compose"
-alias disablegit="export PROMPT='$(_user_host)${_current_dir} ▶ '; export RPROMPT=''"
+alias disablegit="export PROMPT='$(_user_host)${_current_dir} ($(git branch | grep \* | cut -d ' ' -f2)) ▶ '; export RPROMPT=''"
+alias ag="ag --path-to-ignore ~/.ignore"
+
+pssh() { pushd ~/p/movableink/provisioning; bin/ssh production -d $1 -r $2; popd }
+spssh() { pushd ~/p/movableink/provisioning; bin/ssh staging -d ord -r $1; popd }
 
 pcurl () { var=0; while true; do var=$((var+1)); echo -ne "$var "; curl -m 0.25 -sI -XGET $* |head -1; sleep 0.05; done }
 
