@@ -72,9 +72,22 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7/bin:$PAT
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-. ~/.nvm/nvm.sh
+# . ~/.nvm/nvm.sh
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+# Speed up git prompt
+function git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+}
+
 # added by travis gem
-[ -f /Users/michael/.travis/travis.sh ] && source /Users/michael/.travis/travis.sh
+[ -f /Users/mnutt-mbp/.travis/travis.sh ] && source /Users/mnutt-mbp/.travis/travis.sh
+
+# volta
+export VOLTA_HOME="/Users/mnutt-mbp/.volta"
+grep --silent "$VOLTA_HOME/bin" <<< $PATH || export PATH="$VOLTA_HOME/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi

@@ -43,3 +43,7 @@ function bgrep {
 }
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvmexport PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/Cellar/python/2.7/bin/:/usr/local/Cellar/python/2.7/bin/
+
+export PATH="$HOME/.cargo/bin:$PATH"
+export VOLTA_HOME="/Users/mnutt-mbp/.volta"
+grep --silent "$VOLTA_HOME/bin" <<< $PATH || export PATH="$VOLTA_HOME/bin:$PATH"
